@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     --gray-1: rgb(141,166,201);
     --gray-2: #0F1724;
     --light : #10C7C6;
+    --shinelight:#B0F8FF;
     --black: black;
   }
   html{

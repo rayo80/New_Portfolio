@@ -3,9 +3,11 @@ import { MdDesktopMac } from 'react-icons/md';
 import styled from 'styled-components';
 import PText from './PText';
 
+import { motion } from "framer-motion";
+
 const ItemStyles = styled.div`
   text-align: center;
-  width: 30%;
+  width: 28%;
   .servicesItem__icon {
     svg {
       width: 3rem;
@@ -20,17 +22,32 @@ const ItemStyles = styled.div`
   }
 `;
 
+//animacion
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1
+  }
+};
+
+
+
 const ServSectionItems = ({  
   icon = <MdDesktopMac />,
   title = 'Web Design',
   descr = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's ok",
 }) => {
     return ( 
+      
         <ItemStyles className="servicesItem">
-            <div className="servicesItem__icon">{icon}</div>
-            <div className="servicesItem__title">{title}</div>
-            <PText>{descr}</PText>
-        </ItemStyles>
+            <motion.div variants={item}>
+              <div className="servicesItem__icon">{icon}</div>
+              <div className="servicesItem__title">{title}</div>
+              <PText>{descr}</PText>
+            </motion.div>
+        </ItemStyles>   
+      
      );
 }
  

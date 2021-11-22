@@ -22,13 +22,11 @@ const OwnStyle= styled.div`
 
     .own-img{
         max-width: 900px;
-        width: 80%;
-        height: 500px;
-        margin: 0 20% auto;
-
+        width: 90%;
+        height: 650px;
+        margin: 0 10% auto;
         display: flex;
         align-content:center;
-        background:red;
     }
 
 

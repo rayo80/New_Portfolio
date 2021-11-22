@@ -2,14 +2,36 @@ import React from 'react'
 import styled from 'styled-components';
 
 const  ProcessorSVG = styled.div`
-	background-color:green;
-	height:80%;
+	height:105%;
+	transform:scale(1.1, 1);
+	
 	margin: auto auto;
-	#processor_svg{	
+	
+	#processor_svg{
+		filter:drop-shadow(2px 0.5px 2.5px );
 		path{
-			fill:var(--light);		
+			fill:var(--light);
+			cursor:none;		
+		}
+		path:hover{
+			fill:var(--shinelight);
+			stroke-width:4%;	
+			stroke:var(--light);
+			stroke-opacity:3%;
+			transition: all 1.5s ease-out;
+		}
+		.st1{
+			filter:drop-shadow(4px 1px 4px );
+		}
+		.st1:hover{
+			stroke-width:4%;
+			stroke-linecap:round;
+			stroke:var(--light);
+			stroke-opacity:3%;			
 		}
 	}
+
+
 	@media only screen and (max-width: 768px){
 		
 	}
@@ -18,9 +40,10 @@ const  ProcessorSVG = styled.div`
 
 const Processor = () => {
     return (
-	<ProcessorSVG>	
+	<ProcessorSVG>
+
 		<svg version="1.1" id="processor_svg" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			viewBox="0 0 673.5 834.5"  xmlSpace="preserve">
+			viewBox="0 0 673.5 834.5"  xmlSpace="preserve" 	>
 			<g>
 				<path className="st0" d="M372.3,342v-1.3l-33,1.3v9.7l33-1.3v-2.8l46.9-2.4l11,15l45.6-1.8l26.3-36.5l93-5.7c0.8,3,3,5.1,5.5,5.1
 					c3.2,0,5.9-3.5,5.9-7.9s-2.6-7.9-5.9-7.9c-2.6,0-4.7,2.2-5.5,5.3l-95.1,5.4l-25.6,37.4l-42,0.8L420.9,340l-48.5,2.8V342z
@@ -199,7 +222,7 @@ const Processor = () => {
 					l2.1-4.9l0,0c0.8,0.9,1.9,1.5,3.1,1.6c2.8,0.2,5.2-2,5.5-5.1c0.3-3.1-1.7-5.7-4.5-6c-2.8-0.2-5.2,2-5.5,5.1c-0.1,0.6,0,1.1,0.1,1.7
 					l-0.1-0.2l-4.1,7.2l0.1,45.8L227.4,96.5z M222.7,26.2c0.1-1.2,1-2.1,2.1-2c1,0.1,1.8,1.1,1.7,2.4s-1,2.1-2.1,2
 					C223.4,28.5,222.6,27.4,222.7,26.2z"/>
-				<path className="st0" d="M329.5,326.2l-117.4,7.5c0,0-5.2-0.4-8.3,3.6c-1.2,1.5-2.1,7.3-2.1,7.3v177.2c0,0,1.6,4.5,2.6,5.8
+				<path className="st1" d="M329.5,326.2l-117.4,7.5c0,0-5.2-0.4-8.3,3.6c-1.2,1.5-2.1,7.3-2.1,7.3v177.2c0,0,1.6,4.5,2.6,5.8
 					c0.8,1.1,3.9,3.5,3.9,3.5l117.9,4.8c0,0,4.1-4.1,6.4-7.1c3.8-5,4.1-7.1,4.1-7.1l0.6-185.4c0,0-1-5.6-2.1-7
 					C333.9,328,329.5,326.2,329.5,326.2z M329.5,517c0,0-2.1,2.7-2.8,3.5c-0.9,1.2-3.7,4.7-3.7,4.7l-114.3-4.5V344.3l120.8-7V517z"/>
 				<path className="st0" d="M213.1,419.4l0.7,9.7l0.2-0.1c-0.2,0.6-0.3,1.4-0.2,2.3c0.2,1.2,0.6,2.2,1.2,2.7l2.3,9.4
